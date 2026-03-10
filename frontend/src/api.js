@@ -1,0 +1,11 @@
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "http://localhost:5000"
+});
+
+export const uploadResume = (formData) =>
+  API.post("/upload", formData);
+
+export const askQuestion = (question) =>
+  API.post("/chat", { question });
